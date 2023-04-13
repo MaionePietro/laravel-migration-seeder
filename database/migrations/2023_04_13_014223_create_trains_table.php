@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string('firm',15);
-            $table->string('start station', 30);
-            $table->float('time start');
-            $table->float('time end');
-            $table->tinyInteger('id treno');
+            $table->string('start_station', 30);
+            $table->string('end_station', 30);
+            $table->float('time_start', 4,2);
+            $table->float('time_end', 4,2);
+            $table->tinyInteger('id_train');
             $table->tinyInteger('carriage');
-            $table->boolean('deletion');
+            $table->boolean('deletion', false);
             $table->timestamps();
         });
     }
