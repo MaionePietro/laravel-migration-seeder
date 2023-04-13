@@ -17,15 +17,15 @@
 
 <body>
 
-    <main class="vh-100 d-flex justify-content-center align-items-center">
+    <main class="vh-100 d-flex justify-content-center align-items-center row ">
         @foreach ($trains as $train)
-        <div class="card p-4 m-5" style="width: 18rem;">
+        <div class="card p-4 m-5 " style="width: 18rem;">
               <h5 class="card-title">{{$train->firm}}</h5>
               <p class="card-text">Partenza: {{$train->start_station}} {{$train->time_start}}</p>
               <p class="card-text">Arrivo: {{$train->end_station}} {{$train->time_end}}</p>
               <a href="#" class="btn btn-primary">
                 @if ($train->deletion == 1)
-                    in stansito
+                    in tansito
                 @else
                     cancellato
                 @endif
