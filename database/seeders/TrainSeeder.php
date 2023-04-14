@@ -21,8 +21,8 @@ class TrainSeeder extends Seeder
             $new_train->firm = $faker->randomElement($type);
             $new_train->start_station = $faker->city();
             $new_train->end_station = $faker->city();
-            //$new_train->time_start = $faker->time();
-            //$new_train->time_end = $faker->$faker->time();
+            $new_train->time_start = $faker->time();
+            $new_train->time_end = $faker->time();
             $new_train->id_train = $faker->numberBetween(10, 120);
             $new_train->carriage = $faker->numberBetween(1, 8);
             $new_train->deletion = $faker->boolean();
